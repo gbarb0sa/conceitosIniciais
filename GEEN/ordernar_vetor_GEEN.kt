@@ -11,15 +11,15 @@ fun main() {
     println()
     println()
     println("Posição dos primos: ")
-    lista.forEachIndexed { index, element ->
-        if (numerosPrimos(element)) {
+        lista.forEachIndexed {index, element ->
+            if (validarNumerosPrimos(element)) {
             print("$index ")
         }
     }
 
 }
 
-fun numerosPrimos(x: Int): Boolean {
+fun validarNumerosPrimos(x: Int): Boolean {
     var primo = true
     for (i in 2..x - 1) {
         if (x % i == 0)
